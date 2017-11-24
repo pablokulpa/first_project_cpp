@@ -6,6 +6,7 @@
 #define PROJECT1_RECENTAGLE_H
 
 
+#include <vector>
 #include "Point.h"
 
 class Recentagle {
@@ -22,6 +23,8 @@ public:
 
     double getSectionLength(Point x, Point y);
     double area();
+    double perimiter();
+    double countSumRecentagle(std::vector<Recentagle> recentagles);
 
 private:
     Point a,b,c,d;

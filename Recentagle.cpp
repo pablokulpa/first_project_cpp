@@ -35,3 +35,18 @@ const Point &Recentagle::getC() const {
 const Point &Recentagle::getD() const {
     return d;
 }
+
+double Recentagle::perimiter() {
+    double a = getSectionLength(getA(),getB());
+    double b = getSectionLength(getB(),getC());
+    double perimiter = a * b;
+    return perimiter;
+}
+
+double Recentagle::countSumRecentagle(std::vector<Recentagle> recentagles) {
+    double sum = 0;
+    for(Recentagle recentagle : recentagles){
+        sum += recentagle.perimiter();
+    }
+    return sum;
+}

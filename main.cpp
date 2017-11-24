@@ -1,4 +1,5 @@
 #include <iostream>
+#include <deque>
 #include "Point.h"
 #include "Triangle.h"
 #include "Recentagle.h"
@@ -12,13 +13,16 @@ int main() {
     Point c(10,10);
     Point d(10,2);
     Triangle triangle(a,b,c);
+    Recentagle recentagle(a,b,c,d);
+
+    std::cout <<recentagle.perimiter()<<std::endl;
+    std::vector<Recentagle> vector = {recentagle,recentagle};
+    std::cout << recentagle.countSumRecentagle(vector)<<std::endl;
+
 
     std::cout << triangle.perimiter()<<std::endl;
-    std::cout << triangle.area()<<std::endl;
-    std::cout << triangle.hasGreaterArea(triangle)<<std::endl;
-
-    Recentagle recentagle(a,b,c,d);
-    std::cout<< recentagle.area();
+    std::deque<Triangle> deque = {triangle,triangle};
+    std::cout << triangle.countSumTriangle(deque);
 
 
 

@@ -6,6 +6,7 @@
 #define PROJECT1_TRIANGLE_H
 
 
+#include <deque>
 #include "Point.h"
 #include "Recentagle.h"
 
@@ -17,6 +18,7 @@ public:
     double area();
     bool hasGreaterArea(Triangle& triangle);
     bool hasGreaterArea(Recentagle& recentagle);
+    double countSumTriangle(std::deque<Triangle> triangle);
 
 private:
     Point a,b,c;

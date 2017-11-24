@@ -36,3 +36,12 @@ bool Triangle::hasGreaterArea(Recentagle &recentagle) {
 
     return false;
 }
+
+double Triangle::countSumTriangle(std::deque<Triangle> triangles) {
+    double sum = 0;
+    for(Triangle triangle : triangles){
+        sum += triangle.perimiter();
+    }
+    return sum;
+
+}
