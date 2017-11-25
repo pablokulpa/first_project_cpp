@@ -39,7 +39,7 @@ const Point &Recentagle::getD() const {
 double Recentagle::perimiter() {
     double a = getSectionLength(getA(),getB());
     double b = getSectionLength(getB(),getC());
-    double perimiter = a * b;
+    double perimiter = 2 * a + 2 * b;
     return perimiter;
 }
 
